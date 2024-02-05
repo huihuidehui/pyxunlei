@@ -1,5 +1,7 @@
 # pyxunlei
 基于Docker版本的[Xunlei API Client](https://github.com/cnk3x/xunlei)
+## 支持版本
+仅在3.7.1版本中测试通过
 
 ## 使用方法
 ```
