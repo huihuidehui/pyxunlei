@@ -89,7 +89,8 @@ class XunLeiClient():
         # 获取下载根目录 parent_folder_id
         self._parent_folder_id = None
         response = self._session.get(
-            f"{self._api}/webman/3rdparty/pan-xunlei-com/index.cgi/drive/v1/files?space=device_id%23ba13e36c40db25c5aecaa8e480ba354f&limit=200&parent_id=&filters=%7B%22kind%22%3A%7B%22eq%22%3A%22drive%23folder%22%7D%7D&page_token=&device_space=", headers=self.headers)
+            f"{self._api}/webman/3rdparty/pan-xunlei-com/index.cgi/drive/v1/files?space={quote(self._device_id)}&limit=200&parent_id=&filters=%7B%22kind%22%3A%7B%22eq%22%3A%22drive%23folder%22%7D%7D&page_token=&device_space=", headers=self.headers)
+
         if not download_root_dir:
             self._parent_folder_id = response.json().get('files')[
                 0].get('parent_id')
