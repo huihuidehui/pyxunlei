@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "pyxunlei"
+version = "0.1.0"
+description = "Docker版本迅雷 API Client"
+authors = ["huihuidehui <kanhuihui@163.com>"]
+readme = "README.md"
+repository = "https://github.com/huihuidehui/pyxunlei"
+
+[tool.poetry.dependencies]
+python = "^3.6"
+loguru = "^0.7.2"
+requests = "^2.31.0"
+pydantic = "^2.6.0"
+torrentool = "^1.2.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
