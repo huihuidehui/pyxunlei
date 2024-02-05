@@ -142,12 +142,13 @@ class XunLeiClient():
             return []
         res = []
         for task in tasks:
+            progress =  task.get('progress') if task.get('progress') else 0
             res.append(TaskInfo(
                 name=task.get('name'),
                 file_name=task.get('name'),
                 file_size=int(task.get('file_size')),
                 updated_time=task.get('updated_time'),
-                progress=task.get('progress'),
+                progress=progress,
                 real_path=task.get('params').get('real_path'),
                 speed=int(task.get('params').get('speed')),
                 created_time=task.get('created_time'),
@@ -168,12 +169,13 @@ class XunLeiClient():
             return []
         res = []
         for task in tasks:
+            progress =  task.get('progress') if task.get('progress') else 0
             res.append(TaskInfo(
                 file_name=task.get('name'),
                 name=task.get('name'),
                 file_size=int(task.get('file_size')),
                 updated_time=task.get('updated_time'),
-                progress=task.get('progress'),
+                progress=progress,
                 real_path=task.get('params').get('real_path'),
                 speed=int(task.get('params').get('speed')),
                 created_time=task.get('created_time'),
