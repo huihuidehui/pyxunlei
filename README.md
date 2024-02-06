@@ -4,6 +4,7 @@
 仅在3.7.1版本中测试通过
 
 ## 使用方法
+可以使用pip安装 `pip install pyxunlei -i https://pypi.python.org/simple`
 ```
 from pyxunlei import XunleiClient
 #  初始化时支持以下参数:

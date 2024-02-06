@@ -79,7 +79,7 @@ class XunLeiClient():
             if not self._device_id:
                 raise ValueError(f"device_name {device_name} not found")
         else:
-            if len(tasks) >= 1:
+            if len(tasks) > 1:
                 logger.warning(
                     f'Multiple remote devices are bound, using the first one {tasks[0].get("device_name")}')
             self._device_id = tasks[0].get('params').get('target')
