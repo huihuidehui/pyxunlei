@@ -224,22 +224,23 @@ class XunLeiClient():
         task_file_count = data.get('list').get(
             'resources')[0].get('file_count')
         task_files = []
-        self._index = 0
         # 递归处理
-
         def helper(resources):
             for resource in resources:
                 if resource.get('is_dir'):
                     helper(resource.get('dir').get('resources'))
                 else:
+                    if not resource.get('file_index'):
+                        file_index = 0
+                    else:
+                        file_index = resource.get('file_index')
                     task_files.append(
                         TaskFile(
-                            index=self._index,
+                            index=file_index,
                             file_size=resource.get('file_size'),
                             file_name=resource.get('name')
                         )
                     )
-                    self._index += 1
         root_resources = data.get('list').get('resources')
         helper(root_resources)
         if callable(preprocess_files):
