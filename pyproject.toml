@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "pyxunlei"
-version = "0.1.5"
+version = "0.1.7"
 description = "Docker版本迅雷 API Client"
 authors = ["huihuidehui <kanhuihui@163.com>"]
 readme = "README.md"

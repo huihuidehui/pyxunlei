@@ -151,7 +151,7 @@ class XunLeiClient():
                 updated_time=task.get('updated_time'),
                 progress=progress,
                 real_path=task.get('params').get('real_path'),
-                speed=int(task.get('params').get('speed')),
+                speed=int(task.get('params').get('speed',0)),
                 created_time=task.get('created_time'),
                 origin=task
             ))
@@ -178,7 +178,7 @@ class XunLeiClient():
                 updated_time=task.get('updated_time'),
                 progress=progress,
                 real_path=task.get('params').get('real_path'),
-                speed=int(task.get('params').get('speed')),
+                speed=int(task.get('params').get('speed',0)),
                 created_time=task.get('created_time'),
                 origin=task
             ))
